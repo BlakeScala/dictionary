@@ -1,17 +1,20 @@
 <h1>$word</h1>
 
+<form method="post">
+  <div class="form-group">
+    <label for="definitionInput">Enter a definition</label>
+    <input id="definitionInput" name="definitionInput" type="text">
+    <button type="submit" class"btn" name="button">Add Definition</button>
+  </div>
+</form>
+
 <h4>Definitions</h4>
+#if ($definitions.size() == 0)
+<p>Your definitions go here!</p>
+#end
 
 <ol>
 #foreach ($definition in $definitions)
   <li>$definition.getDefinition()</li>
 #end
 </ol
-
-<form method="post">
-  <div class="form-group">
-    <label for="definitionInput">Enter a definition</label>
-    <input id="definitionInput" name="definitionInput" type="text">
-  </div>
-  <button type="submit" class"btn" name="button">Add Definition</button>
-</form>
