@@ -13,10 +13,12 @@ _Java application that lets users enter words and save multiple definitions for 
 * _Enter command 'gradle run' and go to 'localhost:4567' in your browser_
 
 ## Specs
-*_Application lets users create instances of Word class_
-  * Input: "word" -- Output: Word word = new Word("word");
-*_Application lets users create instances of Definition class inside of a word_
-  * Input: "definition" -- Output: Definition definition = new Definition(definition);
+* Application lets users create instances of Word class
+    * Input: "word"
+    * Output: Word word = new Word("word");
+* Application lets users create instances of Definition class inside of a word_
+  * Input: "definition"
+  * Output: Definition definition = new Definition(definition);
 
 ## Technologies Used
 Java, Spark, JUnit, HTML, CSS, VelocityTemplateEngine, atom
