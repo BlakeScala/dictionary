@@ -33,4 +33,8 @@ public class Word {
   public static Word find(int id) {
     return mDictionary.get(id - 1);
   }
+
+  public List<Definition> getDefinitions() {
+    return mDefinitions;
+  }
 }

@@ -43,6 +43,12 @@ public class WordTest {
     Word phrase = new Word("Hey there");
     assertEquals(phrase, Word.find(phrase.getID()));
   }
+
+  @Test
+  public void getDefinitions_initiallyReturnsEmpty_true() {
+    Word test = new Word("test");
+    assertEquals(test.getDefinitions().size(), 0);
+  }
   // @Test
   // public void Word_addDefinitionToWord_true() {
   //   Word test = new Word("test");
