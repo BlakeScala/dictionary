@@ -14,6 +14,9 @@ public class Word {
     mID = mDictionary.size();
   }
 
+  public static void clear() {
+    mDictionary.clear();
+  }
   public String getWord() {
     return mWord;
   }
