@@ -5,12 +5,16 @@ public class Word {
   private String mWord;
   private int mId;
   // private List<Definition> mDefintions;
-  private static List<Word> words = new ArrayList<Word>();
+  private static List<Word> mDictionary = new ArrayList<Word>();
 
-  public Word(String word) {
-    mWord = word;
-    words.add(this);
-    mId = words.size();
+  public Word(String _word) {
+    mWord = _word;
     // mDefinitions = new ArrayList<Definition>();
+    mId = words.size();
+    mDictionary.add(this);
+  }
+
+  public String getWord() {
+    return mWord;
   }
 }
