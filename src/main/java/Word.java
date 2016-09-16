@@ -37,4 +37,8 @@ public class Word {
   public List<Definition> getDefinitions() {
     return mDefinitions;
   }
+
+  public void define(Definition definition) {
+    mDefinitions.add(definition);
+  }
 }

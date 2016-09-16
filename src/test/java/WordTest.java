@@ -49,10 +49,12 @@ public class WordTest {
     Word test = new Word("test");
     assertEquals(test.getDefinitions().size(), 0);
   }
-  // @Test
-  // public void Word_addDefinitionToWord_true() {
-  //   Word test = new Word("test");
-  //   Definition testDefinition = new Definition("a critical examination, observation, or evaluation");
-  //   assertEquals(true, test.contains(testDefinition));
-  // }
+
+  @Test
+  public void Word_addsDefinitionToWord_true() {
+    Word test = new Word("test");
+    Definition testDefinition = new Definition("a critical examination, observation, or evaluation");
+    test.define(testDefinition);
+    assertEquals(true, test.getDefinitions().contains(testDefinition));
+  }
 }
