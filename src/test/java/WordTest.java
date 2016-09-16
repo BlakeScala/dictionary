@@ -5,9 +5,8 @@ import java.time.LocalDateTime;
 public class WordTest {
 
   @Test
-  public void Task_instantiatesCorrectly_true() {
-    Task myTask = new Task("Mow the lawn");
-    assertEquals(true, myTask instanceof Task);
+  public void Word_instantiatesCorrectly_true() {
+    Word test = new Word("test");
+    assertEquals(true, test instanceof Word);
   }
-
-]
+}
