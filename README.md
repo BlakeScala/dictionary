@@ -14,9 +14,9 @@ _Java application that lets users enter words and save multiple definitions for 
 
 ## Specs
 *_Application lets users create instances of Word class_
-  ** Input: "word" -- Output: Word word = new Word("word");
+  * Input: "word" -- Output: Word word = new Word("word");
 *_Application lets users create instances of Definition class inside of a word_
-  ** Input: "defintion" -- Output: Definition definition = new Definition(definition);
+  * Input: "definition" -- Output: Definition definition = new Definition(definition);
 
 ## Technologies Used
 Java, Spark, JUnit, HTML, CSS, VelocityTemplateEngine, atom
