@@ -1,12 +1,11 @@
 <h1>Custom Dictionary</h1>
-<p>Enter words, terms, phrases you've never heard before and enter their meanings!</p>
+<p>Enter words, terms, phrases you've never heard before and log their meanings!</p>
 
 #if ($words.size() == 0)
 <p>First, add a few words to your dictionary</p>
+#else
+<p>Click on a word to view/add definitions!</p>
 #end
-<p>Click on a word to add definitions to it</p>
-<a href="/add-word">Add Word to Dictionary</a>
-
 
 <form action="/" method="post">
   <div class="form-group">
@@ -17,5 +16,5 @@
 </form>
 
 #foreach ($word in $words)
-  <p><a href="/$word.getWord()">$word.getWord()</a></p>
+  <p><a href="/$word.getID()">$word.getWord()</a></p>
 #end

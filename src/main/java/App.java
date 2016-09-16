@@ -25,10 +25,24 @@ public class App {
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/:getWord", (request, response) -> {
+    get("/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/new-word.vtl");
+      model.put("template", "templates/word.vtl");
+      Word word= Word.find(Integer.parseInt(request.params(":id")));
+      model.put("word", word.getWord());
       return new ModelAndView(model, layout);
-    })
+    }, new VelocityTemplateEngine());
+
+    post("/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/word.vtl");
+      Word word= Word.find(Integer.parseInt(request.params(":id")));
+      String definitionInput= request.queryParams("definitionInput");
+      Definition wordDefinition = new Definition(definitionInput);
+      word.define(wordDefinition);
+      model.put("word", word.getWord());
+      model.put("definitions", word.getDefinitions());
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
