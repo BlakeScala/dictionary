@@ -17,11 +17,16 @@ public class Word {
   public static void clear() {
     mDictionary.clear();
   }
+
   public String getWord() {
     return mWord;
   }
 
   public int getID() {
     return mID;
+  }
+
+  public static List<Word> all() {
+    return mDictionary;
   }
 }
