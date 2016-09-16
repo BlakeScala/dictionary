@@ -30,6 +30,7 @@ public class App {
       model.put("template", "templates/word.vtl");
       Word word= Word.find(Integer.parseInt(request.params(":id")));
       model.put("word", word.getWord());
+      model.put("definitions", word.getDefinitions());
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
