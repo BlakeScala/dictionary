@@ -57,4 +57,15 @@ public class WordTest {
     test.define(testDefinition);
     assertEquals(true, test.getDefinitions().contains(testDefinition));
   }
+
+  @Test
+  public void Word_addsMultipleDefinitionToWord_true() {
+    Word test = new Word("test");
+    Definition testDefinition = new Definition("a critical examination, observation, or evaluation");
+    Definition testDefinitionTwo = new Definition("a means of testing");
+    test.define(testDefinition);
+    test.define(testDefinitionTwo);
+    assertEquals(true, test.getDefinitions().contains(testDefinition));
+    assertEquals(true, test.getDefinitions().contains(testDefinitionTwo));
+  }
 }
