@@ -3,8 +3,7 @@ import static org.junit.Assert.*;
 import java.time.LocalDateTime;
 
 public class DefinitionTest {
-
-
+  
   @Test
   public void Definition_instantiatesCorrectly_true() {
     Definition testDefinition = new Definition("a critical examination, observation, or evaluation");
