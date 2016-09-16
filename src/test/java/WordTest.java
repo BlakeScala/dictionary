@@ -38,9 +38,15 @@ public class WordTest {
   }
 
   @Test
-  public void Word_addDefinitionToWord_true() {
+  public void Word_findReturnsSameWord_String() {
     Word test = new Word("test");
-    Definition testDefinition = new Definition("a critical examination, observation, or evaluation");
-    assertEquals(true, test.contains(testDefinition));
+    Word phrase = new Word("Hey there");
+    assertEquals(phrase, Word.find(phrase.getID()));
   }
+  // @Test
+  // public void Word_addDefinitionToWord_true() {
+  //   Word test = new Word("test");
+  //   Definition testDefinition = new Definition("a critical examination, observation, or evaluation");
+  //   assertEquals(true, test.contains(testDefinition));
+  // }
 }

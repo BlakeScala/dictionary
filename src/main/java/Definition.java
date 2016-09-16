@@ -1,6 +1,11 @@
-import java.util.List;
-import java.util.ArrayList;
-
 public class Definition {
   private String mDefinitionWords;
+
+  public Definition (String _definitionWords) {
+    mDefinitionWords = _definitionWords;
+  }
+
+  public String getDefinition(){
+    return mDefinitionWords;
+  }
 }

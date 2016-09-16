@@ -4,12 +4,12 @@ import java.util.ArrayList;
 public class Word {
   private String mWord;
   private int mID;
-  // private List<Definition> mDefinitions;
+  private List<Definition> mDefinitions;
   private static List<Word> mDictionary = new ArrayList<Word>();
 
   public Word(String _word) {
     mWord = _word;
-    // mDefinitions = new ArrayList<Definition>();
+    mDefinitions = new ArrayList<Definition>();
     mDictionary.add(this);
     mID = mDictionary.size();
   }
@@ -28,5 +28,9 @@ public class Word {
 
   public static List<Word> all() {
     return mDictionary;
+  }
+
+  public static Word find(int id) {
+    return mDictionary.get(id - 1);
   }
 }
