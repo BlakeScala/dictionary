@@ -4,6 +4,11 @@ import java.time.LocalDateTime;
 
 public class WordTest {
 
+  @After
+  public void wordClear() {
+    Word.clear();
+  }
+
   @Test
   public void Word_instantiatesCorrectly_true() {
     Word test = new Word("test");
